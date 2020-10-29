@@ -77,13 +77,13 @@ function checkNode(row, col, curr, checker, seen, counter) {
 // Animate the nodes
 function changeColor(node, counter, cost) {
   setTimeout(() => {
-    node.style.backgroundColor = "#e5edb7";
+    node.style.backgroundColor = "pink";
     if (cost) {
       node.innerHTML = cost;
     }
   }, counter * 100);
   setTimeout(() => {
-    node.style.backgroundColor = "#f1c5c5";
+    node.style.backgroundColor = "green";
   }, counter * 100 + 100);
 } // End changeColor
 

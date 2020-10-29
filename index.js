@@ -22,7 +22,7 @@ function createBoard() {
   grid.innerHTML = "";
   for (var row = 0; row < 10; row++) {
     for (var col = 0; col < 10; col++) {
-      let weight = Math.round(getRandomArbitrary(1, 100));
+      let weight = Math.round(getRandomArbitrary(1, 200));
       let temp = createNode(row, col, weight);
       let shadow = weight / 10;
       temp.style.boxShadow = `${shadow}px ${shadow}px ${shadow}px rgba(0,0,0,0.8)`;
@@ -136,11 +136,14 @@ function start() {
       var pcol = parseInt(coor[1]);
       endNode = document.querySelector(`div[row="${prow}"][col="${pcol}"]`);
     }
+    var mess = document.querySelector(`div[row="${9}"][col="${9}"]`);
+    alert("The Shortest Path Cost is : " + parseInt(mess.getAttribute("cost")) + '\n' + "Press OK to see the Shortest Path");
   }, counter * 100 + 100);
   // Show refresh button again
   setTimeout(() => {
     refreshBtn.style.visibility = "visible";
   }, counter * 100 + 100);
+  
 } // End start
 
 // Algo Explanation tabs | Source https://www.w3schools.com/howto/howto_js_tabs.asp

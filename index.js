@@ -1,9 +1,11 @@
+//This funtion getRandomArbitrary is to generate random number of range min to max
 // Returns a random number between min (inclusive) and max (exclusive)
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 } // End getRandomArbitrary
 
 // Create a Node
+//And setting each node the attributes using setAttribute method
 function createNode(row, col, weight) {
   var node = document.createElement("div");
   node.setAttribute("class", "node");
